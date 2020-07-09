@@ -1,0 +1,86 @@
+<html>
+<h1 style="text-align:center" color="primary"><br> Career and Job Recommendation System <br> </h1>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <mat-card class="form-card">
+    <mat-card-title class="heading">Registration form</mat-card-title>
+    <mat-form-field appearance="outline" class="margin">
+      <mat-label>Enter First Name</mat-label>
+      <input matInput placeholder="" formControlName="firstName" required />
+      
+      <mat-error> </mat-error> </mat-form-field
+    ><br />
+    <mat-form-field appearance="outline" class="margin">
+      <mat-label>Enter Last Name</mat-label>
+      <input matInput placeholder="" formControlName="lastName" required />
+      <mat-error>
+        Enter a valid last name
+      </mat-error> </mat-form-field
+    ><br />
+
+  <mat-form-field appearance="outline" class="margin">
+      <mat-label>Enter Email ID</mat-label>
+      <input
+        matInput
+        placeholder=""
+        type="email"
+        formControlName="email"
+        required
+      />
+      
+      <mat-error>
+        Enter a valid email
+      </mat-error></mat-form-field
+    ><br />
+    <mat-form-field appearance="outline" class="margin">
+      <mat-label>Enter Mobile Number</mat-label>
+      <input matInput placeholder="" formControlName="mobile" (keypress)="numberOnly($event)"/>
+      
+      <mat-error>
+        Enter a valid mobile number
+      </mat-error></mat-form-field
+    ><br />
+    
+    <div formGroupName="pass">
+      <mat-form-field appearance="outline" class="margin">
+        <mat-label>Enter Password</mat-label>
+        <input
+          matInput
+          placeholder=""
+          type="password" 
+          formControlName="password"
+          required
+        />
+       
+        <mat-error>
+          Enter a valid password. Should contain atleast one block letter followed by, atleast one small letter, followed by atleast one special character. and password should be atleast of 8 characters.
+        </mat-error></mat-form-field
+      ><br />
+      <mat-form-field appearance="outline" class="margin">
+        <mat-label>Re-enter password</mat-label>
+        <input
+          matInput
+          placeholder=""
+          type="password"
+          formControlName="confirm"
+          required
+        />
+         </mat-form-field
+      ><br />
+      <mat-error
+        *ngIf="
+          this.profileForm.get('pass').get('password').valid &&
+          this.profileForm.get('pass').get('confirm').valid &&
+          this.profileForm.get('pass').invalid
+        "
+        >The passwords should match</mat-error
+      >
+    </div>
+  
+    <button mat-raised-button color="primary" [disabled]="!profileForm.valid">
+      Submit
+    </button>
+	<br>
+<br>
+  </mat-card>
+</form>
+</html>

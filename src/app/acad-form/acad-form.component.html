@@ -1,0 +1,645 @@
+<form [formGroup]="acadForm">
+  <mat-card class="form-card"
+    ><mat-horizontal-stepper [linear]="True">
+
+      <mat-step stepControlName="puc">
+        <form formGroupName="puc">
+          <ng-template matStepLabel>Personal Details</ng-template>
+
+          <mat-form-field appearance="outline" class="margin">
+            <mat-label>EMAIL</mat-label>
+            <input matInput placeholder="" formControlName="email" required />
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>FATHER</mat-label>
+            <input matInput placeholder="" formControlName="father" />
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>FATHER'S OCCUPATION</mat-label>
+            <input matInput placeholder="" formControlName="foccupation" />
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>MOTHER</mat-label>
+            <input matInput placeholder="" formControlName="mother" />
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>MOTHER'S OCCUPATION</mat-label>
+            <input matInput placeholder="" formControlName="moccupation" />
+          </mat-form-field>
+          <br /><br />
+
+
+<h3 class="heading"> Enter Date of Birth : </h3>
+
+<mat-form-field>
+  <mat-label>Date of Birth</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field><br /> <br />
+
+ <h3 class="heading"> Select Gender</h3>
+          <mat-label ></mat-label
+          ><br />
+          <mat-radio-group formControlName="gender" required>
+            <mat-radio-button [value]="true" checked="true" color="primary">Male</mat-radio-button>
+            <mat-radio-button [value]="false" class="margin" color="primary"
+              >Female</mat-radio-button
+            > </mat-radio-group
+          ><br /><br />
+
+
+
+<h3 class="heading"> Select Family Annual Income</h3>
+<mat-radio-group class="income" formControlName="income" required>
+<mat-radio-button [value]="true" checked="true" color="primary">< 1 Lakh</mat-radio-button>
+<mat-radio-button color="primary">1-5 Lakhs</mat-radio-button>
+<mat-radio-button color="primary">5-8 Lakhs</mat-radio-button>
+<mat-radio-button color="primary">> 8 Lakhs</mat-radio-button>
+</mat-radio-group><br /><br />
+
+
+
+   
+
+
+          <div>
+            <button
+              mat-button
+              matStepperNext
+              type="button"
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+ <mat-step stepControlName="interest">
+        <form formGroupName="interest">
+          <ng-template matStepLabel>Personal Interests</ng-template>
+
+<h2> Enter Interests other than academics </h2>
+
+<mat-form-field>
+  <mat-label>Interest 1</mat-label>
+  <select matNativeControl>
+    <option value=“1“>Sports</option>
+<option value=“2“>Music</option>
+<option value=“3“>dance</option>
+<option value=“4“>photography</option>
+<option value=“5“>book writing</option>
+<option value=“6“>social service</option>
+<option value=“7“>painting</option>
+<option value=“8“>singing</option>
+<option value=“9“>coding</option>
+<option value=“10“>history</option>
+<option value=“11“>technology</option>
+<option value=“12“>entrepreneurship</option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+<mat-form-field>
+  <mat-label>Interest 2</mat-label>
+  <select matNativeControl>
+    <option value=“1“>Sports</option>
+<option value=“2“>Music</option>
+<option value=“3“>dance</option>
+<option value=“4“>photography</option>
+<option value=“5“>book writing</option>
+<option value=“6“>social service</option>
+<option value=“7“>painting</option>
+<option value=“8“>singing</option>
+<option value=“9“>coding</option>
+<option value=“10“>history</option>
+<option value=“11“>technology</option>
+<option value=“12“>entrepreneurship</option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+<mat-form-field>
+  <mat-label>Interest 3</mat-label>
+  <select matNativeControl>
+    <option value=“1“>Sports</option>
+<option value=“2“>Music</option>
+<option value=“3“>dance</option>
+<option value=“4“>photography</option>
+<option value=“5“>book writing</option>
+<option value=“6“>social service</option>
+<option value=“7“>painting</option>
+<option value=“8“>singing</option>
+<option value=“9“>coding</option>
+<option value=“10“>history</option>
+<option value=“11“>technology</option>
+<option value=“12“>entrepreneurship</option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+
+<h2> Enter Interest regarding higher studies </h2>
+
+
+<mat-form-field>
+  <mat-label>Interest 1</mat-label>
+  <select matNativeControl>
+    <option value="t">Tenth</option>
+    <option value="i">Intermediate</option>
+    <option value="b">Masters</option>
+    <option value="m">Bachelor</option>
+    <option value="p">PhD</option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+
+<h2> Enter Interests regarding job </h2>
+
+<mat-form-field>
+  <mat-label>Interest 1</mat-label>
+  <select matNativeControl>
+    <option value=“1“>Engineer</option>
+<option value=“2“>Doctor</option>
+<option value=“3“>Teacher</option>
+<option value=“4“>Civil servant</option>
+<option value=“5“>Defense services</option>
+<option value=“6“>Groups services</option>
+<option value=“7“>Entrepreneur</option>
+<option value=“8“>Freelancing</option>
+<option value=“9“>Professional service vendor</option>
+<option value=“10“>film making</option>
+<option value=“11“>Photography</option>
+<option value=“12“>Musician</option>
+<option value=“13“>Chef</option>
+<option value=“14“>Banking</option>
+<option value=“15“>Staff selection </option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+<mat-form-field>
+  <mat-label>Interest 2</mat-label>
+  <select matNativeControl>
+   <option value=“1“>Engineer</option>
+<option value=“2“>Doctor</option>
+<option value=“3“>Teacher</option>
+<option value=“4“>Civil servant</option>
+<option value=“5“>Defense services</option>
+<option value=“6“>Groups services</option>
+<option value=“7“>Entrepreneur</option>
+<option value=“8“>Freelancing</option>
+<option value=“9“>Professional service vendor</option>
+<option value=“10“>film making</option>
+<option value=“11“>Photography</option>
+<option value=“12“>Musician</option>
+<option value=“13“>Chef</option>
+<option value=“14“>Banking</option>
+<option value=“15“>Staff selection </option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+<mat-form-field>
+  <mat-label>Interest 3</mat-label>
+  <select matNativeControl>
+   <option value=“1“>Engineer</option>
+<option value=“2“>Doctor</option>
+<option value=“3“>Teacher</option>
+<option value=“4“>Civil servant</option>
+<option value=“5“>Defense services</option>
+<option value=“6“>Groups services</option>
+<option value=“7“>Entrepreneur</option>
+<option value=“8“>Freelancing</option>
+<option value=“9“>Professional service vendor</option>
+<option value=“10“>film making</option>
+<option value=“11“>Photography</option>
+<option value=“12“>Musician</option>
+<option value=“13“>Chef</option>
+<option value=“14“>Banking</option>
+<option value=“15“>Staff selection </option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+          
+          <div>
+            <button
+              mat-button
+              matStepperNext
+              type="button"
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step stepControlName="university">
+        <form formGroupName="university">
+          <ng-template matStepLabel>Academic Details</ng-template>
+          <h2>10th STANDARD</h2><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>Baord</mat-label>
+            <input matInput placeholder="" formControlName="baord10" required/>
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>Passing year</mat-label>
+            <input matInput placeholder="" formControlName="year10" required/>
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label> Total Percentage</mat-label>
+            <input matInput placeholder="" formControlName="percentage10" required/>
+          </mat-form-field>
+          <br /><br />
+
+         
+          <mat-label>Maths Percentage</mat-label><br /><br />
+          <mat-radio-group formControlName="maths" required>
+            <mat-radio-button [value]="true" checked="true" color="primary"><50%</mat-radio-button>
+            <mat-radio-button [value]="false" class="margin" color="primary"> 50 - 60 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 60 - 70 %</mat-radio-button> 
+ 	    <mat-radio-button [value]="false" class="margin" color="primary"> 70 - 80 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 80 - 90 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> > 90 %</mat-radio-button> 
+	</mat-radio-group
+          ><br /><br />
+
+ <mat-label>Physics Percentage</mat-label><br /><br />
+          <mat-radio-group formControlName="physics" required>
+            <mat-radio-button [value]="true" checked="true" color="primary"><50%</mat-radio-button>
+            <mat-radio-button [value]="false" class="margin" color="primary"> 50 - 60 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 60 - 70 %</mat-radio-button> 
+ 	    <mat-radio-button [value]="false" class="margin" color="primary"> 70 - 80 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 80 - 90 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> > 90 %</mat-radio-button> 
+	</mat-radio-group
+          ><br /><br />
+
+ <mat-label>Biology Percentage</mat-label><br /><br />
+          <mat-radio-group formControlName="biology" required>
+            <mat-radio-button [value]="true" checked="true" color="primary"><50%</mat-radio-button>
+            <mat-radio-button [value]="false" class="margin" color="primary"> 50 - 60 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 60 - 70 %</mat-radio-button> 
+ 	    <mat-radio-button [value]="false" class="margin" color="primary"> 70 - 80 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 80 - 90 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> > 90 %</mat-radio-button> 
+	</mat-radio-group
+          ><br /><br />
+
+ <mat-label>Social Percentage</mat-label><br /><br />
+          <mat-radio-group formControlName="social" required>
+            <mat-radio-button [value]="true" checked="true" color="primary"><50%</mat-radio-button>
+            <mat-radio-button [value]="false" class="margin" color="primary"> 50 - 60 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 60 - 70 %</mat-radio-button> 
+ 	    <mat-radio-button [value]="false" class="margin" color="primary"> 70 - 80 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 80 - 90 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> > 90 %</mat-radio-button> 
+	</mat-radio-group
+          ><br /><br /> <br />
+
+<h2>INTERMEDIATE or +2</h2><br />
+
+<h4>Select your stream </h4>
+<mat-form-field>
+  <mat-label>Stream</mat-label>
+  <select matNativeControl>
+    <option value="mpc">MPC</option>
+    <option value="bipc">BiPC</option>
+    <option value="hec">HEC</option>
+    <option value="cec">CEC</option>
+    <option value="mec">MEC</option>
+    <option value="iti">ITI</option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>Passing year</mat-label>
+            <input matInput placeholder="" formControlName="year12" required/>
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label> Total Percentage</mat-label>
+            <input matInput placeholder="" formControlName="percentage12" required/>
+          </mat-form-field>
+          <br /><br />
+
+
+         
+          <mat-label>Subject-1 Percentage</mat-label><br /><br />
+          <mat-radio-group formControlName="sub1" >
+            <mat-radio-button [value]="true" checked="true" color="primary"><50%</mat-radio-button>
+            <mat-radio-button [value]="false" class="margin" color="primary"> 50 - 60 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 60 - 70 %</mat-radio-button> 
+ 	    <mat-radio-button [value]="false" class="margin" color="primary"> 70 - 80 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 80 - 90 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> > 90 %</mat-radio-button> 
+	</mat-radio-group
+          ><br /><br />
+
+ <mat-label>Subject-2 Percentage</mat-label><br /><br />
+          <mat-radio-group formControlName="sub2">
+            <mat-radio-button [value]="true" checked="true" color="primary"><50%</mat-radio-button>
+            <mat-radio-button [value]="false" class="margin" color="primary"> 50 - 60 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 60 - 70 %</mat-radio-button> 
+ 	    <mat-radio-button [value]="false" class="margin" color="primary"> 70 - 80 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 80 - 90 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> > 90 %</mat-radio-button> 
+	</mat-radio-group
+          ><br /><br />
+
+ <mat-label>Subject-3 Percentage</mat-label><br /><br />
+          <mat-radio-group formControlName="sub3">
+            <mat-radio-button [value]="true" checked="true" color="primary"><50%</mat-radio-button>
+            <mat-radio-button [value]="false" class="margin" color="primary"> 50 - 60 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 60 - 70 %</mat-radio-button> 
+ 	    <mat-radio-button [value]="false" class="margin" color="primary"> 70 - 80 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> 80 - 90 %</mat-radio-button> 
+	    <mat-radio-button [value]="false" class="margin" color="primary"> > 90 %</mat-radio-button> 
+	</mat-radio-group
+          ><br /><br /> <br />
+
+<h2>BACHELOR'S DEGREE</h2>
+<mat-form-field>
+  <mat-label>Stream</mat-label>
+  <select matNativeControl required>
+    <option value="ba" >Bachelor of Arts (B.A)</option>>
+<option value="ba-bed" >Bachelor of Education (B.A. B.Ed)</option>
+<option value="babl">Bachelor of Law (B.A.B.L)</option >
+<option value=”ballb”>Bachelor of Law (B.A.LLB)</option >
+<option value=”bams”>Bachelor of Ayurvedic Medicine and Surgery (B.A.M.S)</option >
+<option value=“bas“>Bachelor of Applied Sciences (B.A.S)</option >
+<option value=“baslp“>Bachelor of Arts (B.A.S.L.P)</option >
+<option value=“baslp“>Bachelor of Audiology and Speech Language Pathology (B.A.S.L.P)</option >
+<option value=“barch“>Bachelor of Architecture (B.Arch)</option >
+<option value=“bba“>Bachelor of Business Administration (B.B.A)</option> 
+<option value=“bballb“>Bachelor of Law (B.B.A LL.B)</option >
+<option value=“bbm”>Bachelor of Business Management (B.B.M)</option >
+<option value=“bbs”>Bachelor of Business Studies (B.B.S)</option >
+<option value=“bcs”>Bachelor of Computer Applications (B.C.A)</option >
+<option value=“bcj”>Bachelor of Communication Journalism (B.C.J)</option> 
+<option value=“bcs”>Bachelor of Computer Science (B.C.S)</option >
+<option value=“bcom”>Bachelor of Commerce (B.Com)</option >
+<option value=“bd”>Bachelor of Divinity (B.D)</option >
+<option value=“bds”>Bachelor of Dental Surgery (B.D.S)</option> 
+<option value=”bdt”>Basic Development Therapy (B.D.T)</option >
+<option value=“bdes”>Bachelor of Design (B.Des)</option>
+<option value=“be”>Bachelor of Engineering (B.E)</option>
+<option value=“bes”>Bachelor of Electronic Science (B.E.S)</option>
+<option value=“bed”>Bachelor of Education (B.Ed)</option>
+<option value=“bed-ai”>Bachelor of education in Artificial Intelligence (B.Ed AI)</option>
+<option value=“bedq”>Bachelor of Education (B.EdQ)</option>
+<option value=“beied”>Bachelor of Elementary Education (B.EI.ED)</option>
+<option value=“beled”>Bachelor of Elementary Education (B.EL.Ed)</option>
+<option value=“bfa”>Bachelor of Fine Arts (B.F.A)</option>
+<option value=“bfia”>Bachelor of Financial Investment and Analysis (B.F.I.A)</option>
+<option value=“bfs”>Bachelor of Fishery Sciences (B.F.S)</option>
+<option value=“bftech”>Bachelor of Fashion Technology (B.F.Tech)</option>
+<option value=“bgl”>Bachelor of General Law (B.G.L)</option>
+<option value=”bhed”>Behavioral Healthcare Education (B.H.Ed)</option>
+<option value=“bhm”>Bachelor of Hotel Management (B.H.M)</option>
+<option value=“bhmct”>Bachelor Hotel Management and Catering Technology (B.H.M.C.T)</option>
+<option value=“bhms”>Bachelor of Homeopathic Medicine & Surgery (B.H.M.S)</option>
+<option value=“bhtm”>Bachelor of Hospitality and Tourism Management (B.H.T.M)</option>
+<option value=“bism”>Bachelor of Information Systems Management (B.I.S.M)</option>
+<option value=“bl”>Bachelor of Laws (B.L)</option>
+<option value=“blis”>Bachelor of Library and Information Science (B.L.I.S)</option>
+<option value=“blm”>Bachelor of Labour Management (B.L.M)</option>
+<option value=“blsc”>Bachelor Library Science (B.L.Sc)</option>
+<option value=“blit”>Bachelor of Literature (B.Lit)</option>
+<option value=“bmlt”>Bachelor of Medical Laboratory Technology (B.M.L.T)</option>
+<option value=“bmr”>Bachelor of Mental Retardation (B.M.R)</option>
+<option value=“bmrsc”>Bachelor of Medical Record Science (B.M.R.Sc)</option>
+<option value=“bmsc”>Bachelor in Mobility Science (B.M.Sc)</option>
+<option value=“bmt”>Bachelor of Medical Technology (B.M.T)</option>
+<option value=“bnysc”>Bachelor of Naturopathy and Yogic Sciences (B.N.Y.Sc)</option>
+<option value=“bot”>Bachelor of Occupational Therapy (B.O.T)</option>
+<option value=“both”>Bachelor of Occupational Therapy (B.O.Th)</option>
+<option value=“boptom”>Bachelor of Optometry and Vision Science (B.Optom)</option>
+<option value=“bpe”>Bachelor of Physical Education (B.P.E)</option>
+<option value=“bped”>Bachelor Of Physical Education (B.P.Ed)</option>
+<option value=“bpo”>Bachelor in Prosthetics and Orthotics (B.P.O)</option>
+<option value=“bpr”>Bachelor of Public Relations (B.P.R)</option>
+<option value=“bpt”>Bachelor of Physiotherapy (B.P.T)</option>
+<option value=“bpharma”>Bachelor of Pharmacy (B.Pharma)</option>
+<option value=“brt”>Bachelor of Rehabilitation Therapy (B.R.T)</option>
+<option value=“bs”>Bachelor of Science (B.S)</option>
+<option value=“bse”>Bachelor in Science Education (B.S.E)</option>
+<option value=“bsla”>Bachelor of Speech Language & Audiology (B.S.L.A)</option>
+<option value=“bsls”>Bachelor of Socio Legal Sciences</option >
+<option value=“bsl-llb”>Bachelor of Laws (B.S.L.LL.B)</option>
+<option value=“bsms”>Bachelor of Siddha Medical Sciences (B.S.M.S)</option>
+<option value=“bsw”>Bachelor Of Social Work (B.S.W)</option>
+<option value=“bsc”>Bachelor of Science (B.Sc)</option>
+<option value=“bsc-ed”>Bachelor of Science in Education (B.Sc.Ed)</option>
+<option value=“bta”>Bachelor of Tourism Administration (B.T.A)</option>
+<option value=”btc”>Basic Training Certificate (B.T.C)</option>
+<option value=“btech”>Bachelor of Technology (B.Tech)</option>
+<option value=“bums”>Bachelor of Unani Medicine & Surgery (B.U.M.S)</option>
+<option value=“bvsc”>Bachelor of Veterinary Science (B.V.Sc)</option>
+<option value=“bm”>Bachelor of Medicine </option >
+<option value=“bjmc”>Bachelor of Journalism and Mass Communication (BJMC)</option>
+<option value=“dse-cp“> Diploma in Special Education (D.S.E (CP)</option>
+<option value=“bums”>Bachelor of Unani Medicine & Surgery (Kamil e Tob o Jarahat)</option>
+<option value=“llb”>Bachelor of Law (LL.B)</option>
+<option value=“mbbs”>Bachelor of Surgery (M.B.B.S)</option>
+<option value=”mjmc”>Master of Journalism and Mass Communication (MJMC)</option>
+<option value=”phd”>Doctor of Philosophy (Ph. D)</option>
+<option value=”psy-d”>Clinical Psychology (Psy.D (Cl.Psy)</option>
+<option value=”ugbt”>Under Graduate Basic Training (U.G.B.T)</option>
+<option value=”ugt”>Under Graduate Training (U.G.T)</option>
+<option value=”ugtt”>Under Graduate Teacher Training (U.G.T.T)</option>
+<option value=”ug”>Under Graduate (UG)</option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>Passing year</mat-label>
+            <input matInput placeholder="" formControlName="byear" />
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label> Total Percentage</mat-label>
+            <input matInput placeholder="" formControlName="bpercentage" />
+          </mat-form-field>
+          <br /><br /><br />
+
+<h2>MASTER'S DEGREE</h2>
+<mat-form-field>
+  <mat-label>Cars</mat-label>
+  <select matNativeControl >
+    <option value=“ms-b“>Master of Science (BOTANY)</option>
+<option value=“llm“>Master of Law (LL.M)</option>
+<option value=“ma“>Master of Arts (M.A)</option>
+<option value=“ma-swds“>Master of Arts (M.A. (SWDS)</option>
+<option value=“mam“>Master of Arts in Management (M.A.M)</option>
+<option value=“mapm“>Master of Arts in Personal Management (M.A.P.M)</option>
+<option value=“maslp“>Master of Audiology & Speech Language Pathology (M.A.S.L.P)</option>
+<option value=“matt“>Master of Arts in Theatre & Television (M.A.T.T)</option>
+<option value=“march“>Master of Architecture (M.Arch)</option>
+<option value=“mba“>Master of Business Administration (M.B.A)</option>
+<option value=“mbe“>Master of Business Economics (M.B.E)</option>
+<option value=“mbl“>Master of Business Laws (M.B.L)</option>
+<option value=“mbm“>Master of Business Management (M.B.M)</option>
+<option value=“mbs“>Master of Business Studies (M.B.S)</option>
+<option value=“mca“>Master of Computer Applications (M.C.A)</option>
+<option value=“mcj“>Master of Communication & Journalism (M.C.J)</option>
+<option value=“mcl“>Master of Comparative Laws (M.C.L)</option>
+<option value=“mcm“>Master of Computer Management (M.C.M)</option>
+<option value=“mcs“>Master of Corporate Secretaryship (M.C.S)</option>
+<option value=“mch“>Master of Chirurgical (M.Ch)</option>
+<option value=“mcom“>Master of Commerce (M.Com)</option>
+<option value=“md“>Doctor of Medicine (M.D)</option>
+<option value=“md-s“>Sports Medicine (M.D)</option>
+<option value=“mds“>Master of Dental Surgery (M.D.S)</option>
+<option value=“mdes“>Master of Design (M.Des)</option>
+<option value=“me“>Master of Engineering (M.E)</option>
+<option value=“med“>Master of Education (M.Ed)</option>
+<option value=“med-ai“>Master of education in Artificial Intelligence (M.Ed AI)</option>
+<option value=“mfa“>Master of Fine Arts (M.F.A)</option>
+<option value=“mfc“>Master of Finance & Control (M.F.C)</option>
+<option value=“mfm“>Master of Film Management (M.F.M)</option>
+<option value=“mfs“>Master of Financial Services (M.F.S)</option>
+<option value=“mfsc“>Master of Fishery Science (M.F.Sc)</option>
+<option value=“mft“>Master of Foreign Trade (M.F.T)</option>
+<option value=“mha“>Master of Hospital Administration (M.H.A)</option>
+<option value=“mhhm“>Master of Hospitality & Hotel Management (M.H.H.M)</option>
+<option value=“mhm“>Master of Hospitality Management (M.H.M)</option>
+<option value=“mhrm“>Master of Human Resource Management (M.H.R.M)</option>
+<option value=“mhsc“>Master Of Health Science (M.H.Sc)</option>
+<option value=“mhtm“>Masters of Hospitality and Tourism Management (M.H.T.M)</option>
+<option value=“mib“>Master of International Business (M.I.B)</option>
+<option value=“mim“>Master of Information Management (M.I.M)</option>
+<option value=“mj“>Master of Journalism (M.J)</option>
+<option value=“ml“>Master of Laws (M.L)</option>
+<option value=“mlisc“>Master of Library and Information Science (M.L.I.Sc)</option>
+<option value=“mlm“>Master of Labour Management (M.L.M)</option>
+<option value=“mlsc“>Master of Library Science (M.L.Sc)</option>
+<option value=“mmm“>Master of Marketing Management (M.M.M)</option>
+<option value=“mmp“>Master of Management Program (M.M.P)</option>
+<option value=“mms“>Master of Management Studies (M.M.S)</option>
+<option value=“mot“>Master of Occupational Theraphy (M.O.T)</option>
+<option value=“mpa“>Master of Performing Arts (M.P.A)</option>
+<option value=“mpe“>Master of Psychiatric Epidemiology (M.P.E)</option>
+<option value=“mped“>Master Of Physical Education (M.P.Ed)</option>
+<option value=“mph“>Master of Public Health (M.P.H)</option>
+<option value=“mpib“>Masters Programme in International Business (M.P.I.B)</option>
+<option value=“mpm“>Master of Performance Management (M.P.M)</option>
+<option value=“mpo“>Diploma in Prosthetics & Orthotics (M.P.O)</option>
+<option value=“mpsm“>Masters in Public Systems Management (M.P.S.M)</option>
+<option value=“mpt“>Master of Physiotheraphy (M.P.T)</option>
+<option value=“mph“>Master of Pharmacy (M.Pharma)</option>
+<option value=“mphil“>Master of Philosophy (M.Phil)</option>
+<option value=“mrsc“>Master of Rehabilitation Science (M.R.Sc)</option>
+<option value=“ms-li-isc“>M.S. in Library and Information Science (M.S)</option>
+<option value=“ms“>Master of Science (M.S)</option>
+<option value=“msd“>Master of Social Dynamics (M.S.D)</option>
+<option value=“mspt“>Masters Programme In Sports Physiotheraphy (M.S.P.T)</option>
+<option value=“msw“>Master of Social Work (M.S.W)</option>
+<option value=“msc“>Master of Science (M.Sc)</option>
+<option value=“mta“>Master of Tourism Administrations (M.T.A)</option>
+<option value=“mtm“>Master of Tourism Management (M.T.M)</option>
+<option value=“mtech“>Master of Technology (M.Tech)</option>
+<option value=“mvsc“>Master of Veterinary Science (M.V.Sc)</option>
+<option value=“mba“>Master of Business Administration (MBA)</option>
+<option value=“m-irpm“>Master of Industrial Relation and Personal Management (MIR and PM)</option>
+
+<option value=“mpm“>Master of Personnel Management (MPM)</option>
+<option value=“m-pmir“>Master of Personal Management and Industrial Relation (MPM and IR)</option>
+<option value=“pdipg“>Post Graduate Diploma (P Diplomo)</option>
+<option value=“pgddrm“>Post Graduate Diploma (P.G.D.D.R.M)</option>
+<option value=“pgddt“>Post Graduate Diploma (P.G.D.D.T.(MD:P&N)</option>
+<option value=“pgdei“>Post Graduate Diploma (P.G.D.E.I)</option>
+<option value=“pgdrp“>Post Graduate Diploma (P.G.D.R.P)</option>
+<option value=“pgdse“>Post Graduate Diploma (P.G.D.S.E.(MR)</option>
+<option value=“pgp“>Post Graduate Programme (P.G.P)</option>
+<option value=“pg“>Post Graduate (PG)</option>
+<option value=“pgp“>Post Graduate Programme (PG Programme)</option>
+<option value=“pgd“>Post Graduate Diploma (PGD)</option>
+<option value=“pgexp“>POST GRADUATE PROGRAME FOR EXECUTIVES (PGEXP)</option>
+<option value=“pgp“>POST-GRADUATE PROGRAMME IN MANAGEMENT (PGP)</option>
+<option value=“pgp-abm“>POST GRADUATE PROGRAMME IN AGRIBUSINESS MANAGEMENT (PGP-ABM)</option>
+<option value=“pgp-pmp“>PUBLIC MANAGEMENT AND POLICY (PGP-PMP)</option>
+<option value=“pgpex-vlm“>PGPX IN -VISIONARY LEADERSHIP IN MANUFACTURING (PGPEX-VLM)</option>
+<option value=“pgpm“>POST GRADUATE PROGRAME IN MANAGEMENT (PGPM)</option>
+<option value=“pgpx“>MANAGEMENT FOR EXECUTIVES (PGPX)</option>
+<option value=“phd“>Doctor of Philosophy (Ph. D)</option>
+  </select>
+</mat-form-field>
+<br /><br /> 
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label>Passing year</mat-label>
+            <input matInput placeholder="" formControlName="myear" />
+          </mat-form-field>
+          <br /><br />
+
+<mat-form-field appearance="outline" class="margin">
+            <mat-label> Total Percentage</mat-label>
+            <input matInput placeholder="" formControlName="mpercentage" />
+          </mat-form-field>
+          <br /><br /><br />
+
+
+          
+          <div>
+            <button mat-button matStepperPrevious type="button">Back</button>
+            <button
+              mat-button
+              matStepperNext
+              type="button"
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+      <mat-step stepControlName="mtech">
+        <form formGroupName="mtech">
+          <ng-template matStepLabel>Work Experience</ng-template>
+          <mat-form-field appearance="outline">
+            <mat-label>Number of years</mat-label>
+            <input
+              matInput
+              placeholder=""
+              formControlName="grade"
+              required
+            /> </mat-form-field
+          ><br /><br />
+          
+          
+          <div>
+            <button mat-button matStepperPrevious type="button">Back</button>
+            <button
+              mat-button
+              type="button"
+              (click)="onSubmit()"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </mat-card>
+</form>
